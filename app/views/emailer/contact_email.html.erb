@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML Response from Downey </title></head>			
+<body bgcolor="#ffffff">
+<table border="0">
+<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ DFCU Website Contact Form ] ---------------</b></font></td></tr>
+<tr><td bgcolor="#ead273">Date Submitted :  </td><td bgcolor="#f7efc1"> <%= Time.now.strftime("%A, %B %d, %Y, %H:%M:%S") %>	</td></tr>
+<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ CONTACT INFORMATION ] ---------------</b></font></td></tr>
+<tr><td bgcolor="#ead273">Name : </td><td bgcolor="#f7efc1"> 	<%= @app.name %></td></tr>
+<tr><td bgcolor="#ead273">Phone Number: </td><td bgcolor="#f7efc1"> <%= @app.phone %></td></tr>
+<tr><td bgcolor="#ead273">Email Address: </td><td bgcolor="#f7efc1"> <%= @app.email %></td></tr>
+<tr><td bgcolor="#ead273">Comments: </td><td bgcolor="#f7efc1"> <%= @app.comments %></td></tr>
+<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ END OF EMAIL TRANSMISSION ] ---------------</b></font></td><tr>
+</td>
+</tr>
+</table>
+</body>
+</html>
+

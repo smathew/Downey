@@ -1,0 +1,22 @@
+<div id="container">
+
+	<div id="header">
+    <h1 class="invisible">Downey Federal Credit Union</h1>
+    <%= link_to image_tag("header_2.jpg", :alt=>"header"), root_path %>
+    </div>
+    
+    <div id="menu" class="clearfix">
+    	<ul>
+        	<li class="homebranch"><%= link_to "Home Branch", hb_login_path %></li>
+            <li><%= link_to "Products &amp; Services", prodserv_path %></li>
+            <li><%= link_to "Online Services", olserv_path %></li>
+            <li><%= link_to "Our Credit Union", ourcu_path %></li>
+            <li><%= link_to "Rates", rates_path %></li>
+            <li><%= link_to "Fees", dfcufees_path %></li>
+            <li><%= link_to "What's New", whatsnew_path %></li>
+            <li><%= link_to "Links", links_path %></li>
+            <li><%= link_to "Contact Us", new_contact_path %></li>
+            
+        </ul>
+    </div>    
+    <div id="pagewrapper">

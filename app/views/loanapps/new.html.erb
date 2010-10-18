@@ -1,0 +1,430 @@
+<div id="full" class="clearfix">
+<% form_for(@loanapp) do |f| %>
+  <%= f.error_messages %>
+	<table class="app">
+    <tr>
+        <th colspan="3">LOAN APPLICATION</th>
+    </tr>
+    <tr>
+        <td align="center" colspan="3">
+            <p>Fill in the fields below and submit your application. </p>
+        </td>
+     </tr>
+     <tr>
+        <td colspan="3" align="center" class="textcolor">
+            <p>* Mandatory Fields</p>
+        </td>
+     </tr>
+     <tr class="gray">
+		  <td colspan="3" align="center"><strong>GENERAL INFORMATION</strong></td>
+	 </tr>
+	 <tr>
+	    <td class="tdsize">*Are you interested in protecting your payments with credit life or disability insurance? </td>
+	    <td colspan="2">
+	        <%= f.radio_button("disability_insurance", "Yes") %> Yes
+            <%= f.radio_button("disability_insurance", "No") %> No<br />
+	    </td>
+	 </tr>
+    <tr>
+        <td align="center" class="textcolor" colspan="2">*Type of Loan Requested :&nbsp;
+            <%= f.select( :type_of_loan,
+						{ "New Vehicle" => "New Vehicle", 
+						  "Used Vehicle" => "Used Vehicle", 
+						  "Recreational Vehicle" => "Recreational Vehicle",
+						  "Signature Loan" => "Signature Loan",
+						  "Line of Credit/Overdraft Protection" => "Line of Credit/Overdraft Protection",
+						  "Share Secured Loan" => "Share Secured Loan",
+						  "VISA Classic" => "VISA Classic"
+						}) %> 
+        </td>
+        <td align="center" class="textcolor">*Loan Amount Requested
+          $<%= f.text_field :loan_amount %></td>
+    </tr>            
+    <tr class="gray"><td colspan="3" align="center"><strong>APPLICANT AND/OR CO-APPLICANT INFORMATION</strong></td></tr>
+    <tr class="gray">
+        <td class="tdsize"></td>
+	    <td align="center" class="tdsize1"><strong>Applicant</strong></td>
+	    <td align="center"><strong>Co-Applicant</strong></td>
+    </tr>
+    <tr>
+	    <td align="left" class="tdsize textcolor">*Full Name:  </td>
+	    <td class="tdsize1"><%= f.text_field :applicant_name, :size => 15 %></td>
+	    <td class="bkgcolor"><%= f.text_field :joint_applicant_name, :size => 15 %></td>
+    </tr>
+    <tr>
+	    <td align="left" class="tdsize textcolor">*DFCU Account Number:  </td>
+	    <td class="tdsize1"><%= f.text_field :applicant_account_number, :size => 15 %></td>
+	    <td class="bkgcolor"><%= f.text_field :joint_applicant_account_number, :size => 15 %></td>
+    </tr>
+    <tr>
+	    <td align="left" valign="top" class="tdsize textcolor">*Home Phone Number(XXX-XXX-XXXX): 
+	        <br />
+            <br /> 
+            Best Time to Call:
+            <br />
+            <br /> 
+            Email address: </td>
+	    <td valign="top" class="tdsize1"><%= f.text_field :applicant_home_phone, :size=> 15, :maxlength=>12 %>
+	        <br />
+	        <br />
+			<%= f.text_field :applicant_time_to_call, :size => 15 %>
+	        <br />
+            <br />
+			<%= f.text_field :applicant_email_address, :size => 15 %>
+	    </td>
+	    <td valign="top" class="bkgcolor"><%= f.text_field :joint_applicant_home_phone, :size=> 15, :maxlength=>12 %>
+	        <br />
+	        <br />
+			<%= f.text_field :joint_applicant_time_to_call, :size => 15 %>
+	        <br />
+            <br />
+			<%= f.text_field :joint_applicant_email_address, :size => 15 %>
+	    </td>
+    </tr>
+    <tr>
+	    <td align="left" valign="top" class="tdsize textcolor">*Home Address: <br />
+            <br />
+            <br />*City :<br />
+            <br />
+            <br /> *State : 
+            <br />
+            <br /> *Zip : 
+            <br />
+            <br /> *Monthly Rent/Mortgage :
+        </td>
+	    <td valign="top" class="tdsize1"><%= f.text_field :applicant_home_address, :size => 15 %> <br /><br /> <%= f.text_field :applicant_city, :size => 15 %><br />
+            <br />
+	        <%= f.select( :applicant_state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+            <br />
+            <br />
+	        <%= f.text_field :applicant_zip, :size => 15, :maxlength => 5 %><br />
+	        <br />
+	        $ <%= f.text_field :applicant_monthly_mortgage, :size => 15 %>
+        </td>
+	    <td valign="top" class="bkgcolor">
+	        <%= f.text_field :joint_applicant_home_address, :size => 15 %> <br /><br /> <%= f.text_field :joint_applicant_city, :size => 15 %><br />
+            <br />
+	            <%= f.select( :joint_applicant_state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+            <br />
+            <br />
+	            <%= f.text_field :joint_applicant_zip, :size => 15, :maxlength => 5 %>
+	        <br />
+	        <br />
+	        $ <%= f.text_field :joint_applicant_monthly_mortgage, :size => 15 %>
+	    </td>
+    </tr>
+    <tr class="gray">
+	    <td align="center" colspan="3"><strong>EMPLOYMENT INFORMATION</strong></td>
+    </tr>
+     <tr>
+	    <td valign="top" align="left" class="tdsize textcolor">*Employer Name:<br />
+            <br />
+            <br /> *Phone number(XXX-XXX-XXXX):
+            <br />
+            <br />
+            <br />
+            *Hire Date(MM-DD-YYYY): 
+            <br />
+            <br />*Income/Salary:<br />
+                </td>
+	    <td valign="top" class="tdsize1"><%= f.text_field :applicant_employer_name, :size => 15 %>
+            <br />
+	        <br />
+	            <%= f.text_field :applicant_work_phone, :size => 15, :maxlength => 12 %>
+	        <br />
+			    <br />
+			    <%= f.text_field :applicant_hire_date, :size => 15, :maxlength => 10 %>	   <br />
+			<br />
+			    $
+			    <%= f.text_field :applicant_income, :size => 5, :maxlength => 10 %>
+				<%= f.select( :applicant_income_frequency,
+						{ "Yearly" => "Yearly", 
+						  "Monthly" => "Monthly", 
+						  "Bi-Weekly" => "Bi-Weekly",
+						  "Weekly" => "Weekly",
+						  "Hourly" => "Hourly"
+						}) %>			              
+	    </td>
+	    <td valign="top" class="bkgcolor"><%= f.text_field :joint_applicant_employer_name, :size => 15 %>
+            <br />
+	        <br />
+	            <%= f.text_field :joint_applicant_work_phone, :size => 15, :maxlength => 12 %>
+            <br />
+			<br />
+			    <%= f.text_field :joint_applicant_hire_date, :size => 15, :maxlength => 10 %>
+            <br />
+			<br />
+			    $ <%= f.text_field :joint_applicant_income, :size => 5, :maxlength => 10 %>
+				<%= f.select( :joint_applicant_income_frequency,
+						{ "Yearly" => "Yearly", 
+						  "Monthly" => "Monthly", 
+						  "Bi-Weekly" => "Bi-Weekly",
+						  "Weekly" => "Weekly",
+						  "Hourly" => "Hourly"
+				}) %>	
+	    </td>
+    </tr>
+    <tr>
+	    <td align="left" colspan="3">Alimony, child support, or separate maintenance income need not be revealed
+if you do not wish to have it considered as a basis for repaying this obligation.</td>
+    </tr>
+    <tr>
+        <td valign="top" class="tdsize">Other Income: 
+            <br />
+            <br />Other Income Source:</td>
+        <td class="tdsize1">
+            $ <%= f.text_field :applicant_other_income, :size => 5, :maxlength => 10 %>
+              <%= f.select( :applicant_other_income_frequency,
+						{ "Yearly" => "Yearly", 
+						  "Monthly" => "Monthly", 
+						  "Bi-Weekly" => "Bi-Weekly",
+						  "Weekly" => "Weekly",
+						  "Hourly" => "Hourly"
+						}) %>	<br />
+            <br />
+            <%= f.text_field :applicant_other_income_source, :size => 15, :maxlength => 30 %>
+        </td>
+        <td class="bkgcolor">
+            $ <%= f.text_field :joint_applicant_other_income, :size => 5, :maxlength => 10 %>            
+                <%= f.select( :joint_applicant_other_income_frequency,
+						{ "Yearly" => "Yearly", 
+						  "Monthly" => "Monthly", 
+						  "Bi-Weekly" => "Bi-Weekly",
+						  "Weekly" => "Weekly",
+						  "Hourly" => "Hourly"
+						}) %>	<br />
+            <br />
+            <%= f.text_field :joint_applicant_other_income_source, :size => 15 %>
+        </td>
+    </tr>
+    
+    <tr class="gray">
+	    <td align="center" colspan="3"><strong>APPLICANT'S DEBTS/MONTHLY PAYMENTS</strong></td>
+    </tr>
+    <tr>
+	    <td valign="top" align="center" colspan="3">
+	        <table>
+	            <tr class="gray">
+	                <td>
+	                    <strong>Type of Debt</strong>
+	                </td>
+	                <td>
+	                    <strong>Name of Creditor</strong>
+	                </td>
+	                <td>
+	                    <strong>Outstanding Balance</strong>
+	                </td>
+	                <td>
+	                    <strong>Monthly Payment</strong>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td valign="top">
+	                    1. <%= f.text_field :applicant_debt1, :size => 17 %><br />
+	                    2. <%= f.text_field :applicant_debt2, :size => 17 %><br /><br />
+	                    3. <%= f.text_field :applicant_debt3, :size => 17 %><br /><br />
+	                    4. <%= f.text_field :applicant_debt4, :size => 17 %><br /><br />
+	                    5. <%= f.text_field :applicant_debt5, :size => 17 %><br /><br />
+	                    6. <%= f.text_field :applicant_debt6, :size => 17 %>
+	                </td>
+	                <td valign="top">
+	                    <%= f.text_field :applicant_creditor1, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_creditor2, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_creditor3, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_creditor4, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_creditor5, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_creditor6, :size => 17 %>
+	                </td>
+	                <td valign="top">
+	                    <%= f.text_field :applicant_outstanding_balance1, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_outstanding_balance2, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_outstanding_balance3, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_outstanding_balance4, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_outstanding_balance5, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_outstanding_balance6, :size => 17 %>
+	                </td>
+	                <td valign="top">
+	                    <%= f.text_field :applicant_monthly_payment1, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_monthly_payment2, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_monthly_payment3, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_monthly_payment4, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_monthly_payment5, :size => 17 %><br /><br />
+	                    <%= f.text_field :applicant_monthly_payment6, :size => 17 %>
+	                </td>
+	            </tr>
+	        </table>
+	    </td>
+    </tr>
+    <tr class="gray">
+	    <td align="center" colspan="3"><strong>CO-APPLICANT'S DEBTS/MONTHLY PAYMENTS</strong></td>
+    </tr>
+    <tr>
+	    <td valign="top" align="center" colspan="3" class="bkgcolor">
+	        <table>
+	            <tr class="gray">
+	                <td>
+	                    <strong>Type of Debt</strong>
+	                </td>
+	                <td>
+	                    <strong>Name of Creditor</strong>
+	                </td>
+	                <td>
+	                    <strong>Outstanding Balance</strong>
+	                </td>
+	                <td>
+	                    <strong>Monthly Payment</strong>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="bkgcolor">
+	                    1. <%= f.text_field :joint_applicant_debt1, :size => 17 %><br /><br />
+	                    2. <%= f.text_field :joint_applicant_debt2, :size => 17 %><br /><br />
+	                    3. <%= f.text_field :joint_applicant_debt3, :size => 17 %><br /><br />
+	                    4. <%= f.text_field :joint_applicant_debt4, :size => 17 %><br /><br />
+	                    5. <%= f.text_field :joint_applicant_debt5, :size => 17 %><br /><br />
+	                    6. <%= f.text_field :joint_applicant_debt6, :size => 17 %>
+	                </td>
+	                <td class="bkgcolor">
+	                    <%= f.text_field :joint_applicant_creditor1, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_creditor2, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_creditor3, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_creditor4, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_creditor5, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_creditor6, :size => 17 %>
+	                </td>
+	                <td class="bkgcolor">
+	                    <%= f.text_field :joint_applicant_outstanding_balance1, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_outstanding_balance2, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_outstanding_balance3, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_outstanding_balance4, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_outstanding_balance5, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_outstanding_balance6, :size => 17 %>
+	                </td>
+	                <td class="bkgcolor">
+	                    <%= f.text_field :joint_applicant_monthly_payment1, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_monthly_payment2, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_monthly_payment3, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_monthly_payment4, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_monthly_payment5, :size => 17 %><br /><br />
+	                    <%= f.text_field :joint_applicant_monthly_payment6, :size => 17 %>
+	                </td>
+	            </tr>
+	        </table>
+	    </td>
+    </tr>   
+ </table>
+    <table class="signature">
+        <tr>
+            <td class="red">
+                <p class="centertext"><i>By submitting this encrypted loan request, you authorize DFCU to gather whatever credit and employment information we consider appropriate, including information from various credit reporting agencies.</i></p>
+            </td>
+        </tr>    
+    </table>
+	<p class="centertext"><%= f.submit 'Submit Application' %>
+    </p>
+    <% end %>
+</div>

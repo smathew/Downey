@@ -1,0 +1,160 @@
+<% form_for(@reqinfo) do |f| %>
+  <%= f.error_messages %>
+  <table border="0">
+    <tr>
+        <th colspan="2">
+            <p class="headgreen">Request Information</p><br />
+        </th>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <strong>Please send me information on the following:<br /><br /></strong>
+        </td>
+    </tr>
+    <tr>
+		<td align="right"><%= check_box("reqinfo", "dfcu_membership", {}, "yes", "no")%></td>
+		<td align="left">DFCU Membership</td>
+	</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "checking_accounts", {}, "yes", "no")%></td>
+		<td align="left">Checking Accounts</td>
+	</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "silverstar_member", {}, "yes", "no")%></td>
+		<td align="left">Silver Star Member</td>
+	</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "ira_accounts", {}, "yes", "no")%></td>
+		<td align="left">IRA Accounts</td>
+	</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "minor_accounts", {}, "yes", "no")%></td>
+		<td align="left">Minor Accounts</td>
+	</tr>
+<tr>
+		<td align="right"><%= check_box("reqinfo", "coogan_account", {}, "yes", "no")%></td>
+		<td align="left">Coogan Trust Account</td>
+</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "visa_account", {}, "yes", "no")%></td>
+		<td align="left">DFCU Visa Account</td>
+	</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "atm_card", {}, "yes", "no")%></td>
+		<td align="left">DFCU ATM Card</td>
+	</tr>
+	<tr>
+		<td align="right"><%= check_box("reqinfo", "direct_deposit", {}, "yes", "no")%></td>
+		<td align="left">Direct Deposit or Payroll Deduction</td>
+	</tr>
+    <tr>
+		    <td align="right"><%= check_box("reqinfo", "dotti", {}, "yes", "no")%></td>
+		    <td align="left">"DOTTI" (Director Of Telephone Teller Information)</td>
+    </tr>
+	    <tr>
+		    <td align="right"><%= check_box("reqinfo", "other", {}, "yes", "no")%></td>
+		    <td align="left">Other </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><%= f.text_area :otherinfo, :cols => 15, :rows => 5, :maxlength => 255 %></td>
+    </tr>
+	<tr>
+		<td align="right">&nbsp;</td>
+		<td align="left">&nbsp;</td>
+	</tr>
+	
+	<tr>
+    	<td align="right">Name: </td>
+    	<td><%= f.text_field :name, :maxlength => 25 %></td>
+	</tr>
+	<tr>
+    	<td align="right">DFCU Account No: </td>
+    	<td><%= f.text_field :dfcu_accountno, :maxlength => 25 %></td>
+	</tr>
+	<tr>
+    	<td align="right">Home Phone(XXX-XXX-XXXX): </td>
+    	<td><%= f.text_field :home_phone, :maxlength => 12 %></td>
+	</tr>
+	<tr>
+    	<td align="right">Employer: </td>
+    	<td><%= f.text_field :employer, :maxlength => 25 %></td>
+	</tr>
+	<tr>
+    	<td align="right">Work Phone(XXX-XXX-XXXX): </td>
+    	<td><%= f.text_field :work_phone, :maxlength => 12 %></td>
+	</tr>
+	<tr>
+    	<td align="right">E-Mail Address: </td>
+    	<td><%= f.text_field :email_address, :maxlength => 30 %></td>
+	</tr>
+	<tr>
+    	<td align="right">Home Address: </td>
+    	<td><%= f.text_field :address %></td>
+	</tr>
+	<tr>
+    	<td align="right">City: </td>
+    	<td><%= f.text_field :city %></td>
+	</tr>
+	<tr>
+    	<td align="right">State: </td>
+    	<td><%= f.select( :state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %> 
+		Zip: <%= f.text_field :zip, :maxlength => 5 %></td>
+	</tr>
+	<tr>
+    	<td align="center" colspan="2"><%= f.submit 'Request Info' %>
+    	</td>
+	</tr>
+</table>
+<% end %>

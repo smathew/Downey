@@ -1,0 +1,360 @@
+<h1>Editing loanapp</h1>
+
+<% form_for(@loanapp) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :disability_insurance %><br />
+    <%= f.text_field :disability_insurance %>
+  </p>
+  <p>
+    <%= f.label :type_of_loan %><br />
+    <%= f.text_field :type_of_loan %>
+  </p>
+  <p>
+    <%= f.label :loan_amount %><br />
+    <%= f.text_field :loan_amount %>
+  </p>
+  <p>
+    <%= f.label :applicant_name %><br />
+    <%= f.text_field :applicant_name %>
+  </p>
+  <p>
+    <%= f.label :applicant_account_number %><br />
+    <%= f.text_field :applicant_account_number %>
+  </p>
+  <p>
+    <%= f.label :applicant_home_phone %><br />
+    <%= f.text_field :applicant_home_phone %>
+  </p>
+  <p>
+    <%= f.label :applicant_time_to_call %><br />
+    <%= f.text_field :applicant_time_to_call %>
+  </p>
+  <p>
+    <%= f.label :applicant_email_address %><br />
+    <%= f.text_field :applicant_email_address %>
+  </p>
+  <p>
+    <%= f.label :applicant_home_address %><br />
+    <%= f.text_field :applicant_home_address %>
+  </p>
+  <p>
+    <%= f.label :applicant_city %><br />
+    <%= f.text_field :applicant_city %>
+  </p>
+  <p>
+    <%= f.label :applicant_state %><br />
+    <%= f.text_field :applicant_state %>
+  </p>
+  <p>
+    <%= f.label :applicant_zip %><br />
+    <%= f.text_field :applicant_zip %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_mortgage %><br />
+    <%= f.text_field :applicant_monthly_mortgage %>
+  </p>
+  <p>
+    <%= f.label :applicant_employer_name %><br />
+    <%= f.text_field :applicant_employer_name %>
+  </p>
+  <p>
+    <%= f.label :applicant_work_phone %><br />
+    <%= f.text_field :applicant_work_phone %>
+  </p>
+  <p>
+    <%= f.label :applicant_hire_date %><br />
+    <%= f.text_field :applicant_hire_date %>
+  </p>
+  <p>
+    <%= f.label :applicant_income %><br />
+    <%= f.text_field :applicant_income %>
+  </p>
+  <p>
+    <%= f.label :applicant_income_frequency %><br />
+    <%= f.text_field :applicant_income_frequency %>
+  </p>
+  <p>
+    <%= f.label :applicant_other_income %><br />
+    <%= f.text_field :applicant_other_income %>
+  </p>
+  <p>
+    <%= f.label :applicant_other_income_frequency %><br />
+    <%= f.text_field :applicant_other_income_frequency %>
+  </p>
+  <p>
+    <%= f.label :applicant_other_income_source %><br />
+    <%= f.text_field :applicant_other_income_source %>
+  </p>
+  <p>
+    <%= f.label :applicant_debt1 %><br />
+    <%= f.text_field :applicant_debt1 %>
+  </p>
+  <p>
+    <%= f.label :applicant_creditor1 %><br />
+    <%= f.text_field :applicant_creditor1 %>
+  </p>
+  <p>
+    <%= f.label :applicant_outstanding_balance1 %><br />
+    <%= f.text_field :applicant_outstanding_balance1 %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_payment1 %><br />
+    <%= f.text_field :applicant_monthly_payment1 %>
+  </p>
+  <p>
+    <%= f.label :applicant_debt2 %><br />
+    <%= f.text_field :applicant_debt2 %>
+  </p>
+  <p>
+    <%= f.label :applicant_creditor2 %><br />
+    <%= f.text_field :applicant_creditor2 %>
+  </p>
+  <p>
+    <%= f.label :applicant_outstanding_balance2 %><br />
+    <%= f.text_field :applicant_outstanding_balance2 %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_payment2 %><br />
+    <%= f.text_field :applicant_monthly_payment2 %>
+  </p>
+  <p>
+    <%= f.label :applicant_debt3 %><br />
+    <%= f.text_field :applicant_debt3 %>
+  </p>
+  <p>
+    <%= f.label :applicant_creditor3 %><br />
+    <%= f.text_field :applicant_creditor3 %>
+  </p>
+  <p>
+    <%= f.label :applicant_outstanding_balance3 %><br />
+    <%= f.text_field :applicant_outstanding_balance3 %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_payment3 %><br />
+    <%= f.text_field :applicant_monthly_payment3 %>
+  </p>
+  <p>
+    <%= f.label :applicant_debt4 %><br />
+    <%= f.text_field :applicant_debt4 %>
+  </p>
+  <p>
+    <%= f.label :applicant_creditor4 %><br />
+    <%= f.text_field :applicant_creditor4 %>
+  </p>
+  <p>
+    <%= f.label :applicant_outstanding_balance4 %><br />
+    <%= f.text_field :applicant_outstanding_balance4 %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_payment4 %><br />
+    <%= f.text_field :applicant_monthly_payment4 %>
+  </p>
+  <p>
+    <%= f.label :applicant_debt5 %><br />
+    <%= f.text_field :applicant_debt5 %>
+  </p>
+  <p>
+    <%= f.label :applicant_creditor5 %><br />
+    <%= f.text_field :applicant_creditor5 %>
+  </p>
+  <p>
+    <%= f.label :applicant_outstanding_balance5 %><br />
+    <%= f.text_field :applicant_outstanding_balance5 %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_payment5 %><br />
+    <%= f.text_field :applicant_monthly_payment5 %>
+  </p>
+  <p>
+    <%= f.label :applicant_debt6 %><br />
+    <%= f.text_field :applicant_debt6 %>
+  </p>
+  <p>
+    <%= f.label :applicant_creditor6 %><br />
+    <%= f.text_field :applicant_creditor6 %>
+  </p>
+  <p>
+    <%= f.label :applicant_outstanding_balance6 %><br />
+    <%= f.text_field :applicant_outstanding_balance6 %>
+  </p>
+  <p>
+    <%= f.label :applicant_monthly_payment6 %><br />
+    <%= f.text_field :applicant_monthly_payment6 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_name %><br />
+    <%= f.text_field :joint_applicant_name %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_account_number %><br />
+    <%= f.text_field :joint_applicant_account_number %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_home_phone %><br />
+    <%= f.text_field :joint_applicant_home_phone %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_time_to_call %><br />
+    <%= f.text_field :joint_applicant_time_to_call %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_email_address %><br />
+    <%= f.text_field :joint_applicant_email_address %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_home_address %><br />
+    <%= f.text_field :joint_applicant_home_address %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_city %><br />
+    <%= f.text_field :joint_applicant_city %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_state %><br />
+    <%= f.text_field :joint_applicant_state %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_zip %><br />
+    <%= f.text_field :joint_applicant_zip %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_mortgage %><br />
+    <%= f.text_field :joint_applicant_monthly_mortgage %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_employer_name %><br />
+    <%= f.text_field :joint_applicant_employer_name %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_work_phone %><br />
+    <%= f.text_field :joint_applicant_work_phone %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_hire_date %><br />
+    <%= f.text_field :joint_applicant_hire_date %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_income %><br />
+    <%= f.text_field :joint_applicant_income %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_income_frequency %><br />
+    <%= f.text_field :joint_applicant_income_frequency %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_other_income %><br />
+    <%= f.text_field :joint_applicant_other_income %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_other_income_frequency %><br />
+    <%= f.text_field :joint_applicant_other_income_frequency %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_other_income_source %><br />
+    <%= f.text_field :joint_applicant_other_income_source %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_debt1 %><br />
+    <%= f.text_field :joint_applicant_debt1 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_creditor1 %><br />
+    <%= f.text_field :joint_applicant_creditor1 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_outstanding_balance1 %><br />
+    <%= f.text_field :joint_applicant_outstanding_balance1 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_payment1 %><br />
+    <%= f.text_field :joint_applicant_monthly_payment1 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_debt2 %><br />
+    <%= f.text_field :joint_applicant_debt2 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_creditor2 %><br />
+    <%= f.text_field :joint_applicant_creditor2 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_outstanding_balance2 %><br />
+    <%= f.text_field :joint_applicant_outstanding_balance2 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_payment2 %><br />
+    <%= f.text_field :joint_applicant_monthly_payment2 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_debt3 %><br />
+    <%= f.text_field :joint_applicant_debt3 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_creditor3 %><br />
+    <%= f.text_field :joint_applicant_creditor3 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_outstanding_balance3 %><br />
+    <%= f.text_field :joint_applicant_outstanding_balance3 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_payment3 %><br />
+    <%= f.text_field :joint_applicant_monthly_payment3 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_debt4 %><br />
+    <%= f.text_field :joint_applicant_debt4 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_creditor4 %><br />
+    <%= f.text_field :joint_applicant_creditor4 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_outstanding_balance4 %><br />
+    <%= f.text_field :joint_applicant_outstanding_balance4 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_payment4 %><br />
+    <%= f.text_field :joint_applicant_monthly_payment4 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_debt5 %><br />
+    <%= f.text_field :joint_applicant_debt5 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_creditor5 %><br />
+    <%= f.text_field :joint_applicant_creditor5 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_outstanding_balance5 %><br />
+    <%= f.text_field :joint_applicant_outstanding_balance5 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_payment5 %><br />
+    <%= f.text_field :joint_applicant_monthly_payment5 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_debt6 %><br />
+    <%= f.text_field :joint_applicant_debt6 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_creditor6 %><br />
+    <%= f.text_field :joint_applicant_creditor6 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_outstanding_balance6 %><br />
+    <%= f.text_field :joint_applicant_outstanding_balance6 %>
+  </p>
+  <p>
+    <%= f.label :joint_applicant_monthly_payment6 %><br />
+    <%= f.text_field :joint_applicant_monthly_payment6 %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @loanapp %> |
+<%= link_to 'Back', loanapps_path %>

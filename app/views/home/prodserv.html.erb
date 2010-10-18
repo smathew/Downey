@@ -1,0 +1,77 @@
+<div id="leftcontent" class="clearfix">
+		<p class="headgreen"><a name="lost"></a>Lost or Stolen ATM/Credit Cards and Checks</p>
+        <p>Attention all members. If your VISA debit card or VISA credit card has been lost or stolen please call the following numbers to report the loss. A customer service representative will be available 24 hours a day 365 days a year to assist you. </p>
+        <p class="bold">Visa Credit Card - (800) 299-9842</p>
+        <p class="bold">Visa ATM/Debit Card - (800) 754-4128</p>
+
+        <p class="bold underline">Attention Travelers:</p>
+        <p>If you are going to travel outside of the USA, please be aware of the change in policy on currency conversion on your VISA Debit card account. Please click on <%= link_to "this link", atmdebitdisc_path %> to read the new disclosure. </p>
+        <p>If your ATM card or DFCU checks have been lost or stolen please call the following number:</p>
+        <p class="bold">ATM Card or DFCU Checks - (562) 862-8141 ext. 227</p>
+        <p>(For ATM Cards and DFCU Checks that have been lost or stolen outside of normal business hours, please leave a message reporting what has been lost or stolen, the date and time you are calling and your phone number. A member service representative will get back to you the next business day)</p>
+
+		<hr />
+        
+        <p class="headgreen">Full-Service Accounts</p>
+        <p>Member service is one of DFCU's many qualities. We are proud to offer the accounts that meet your financial needs such as:</p>
+        	<ul class="inner">
+            	<li>Savings Accounts</li>
+                <li>Share Draft Checking Accounts</li>
+                <li>Certificates/IRAs</li>
+                <li>Minor Accounts</li>
+                <li>CU Succeed/Student Accounts</li>
+                <li><%= link_to "Silver Star Members", silver_path %></li>
+                <li><%= link_to "Competitive Rate Loans", rates_path(:anchor => "loans") %></li>
+                <li><%= link_to "DFCU Visa Accounts", visa_path %></li>
+            </ul>
+            
+         <hr />
+         
+         <p class="headgreen">Special Loan Rates</p>
+         <p>For a limited time, New &amp; Used Auto loans are being offered at a lower than normal rate.  Take advantage of this <%= link_to "Special Loan Rate", whatsnew_path %> today.</p>
+         <hr />
+         <p class="headgreen">Notary Service &amp; Signature Guarantee</p>
+         <p>DFCU provides FREE notary service and medallion signature guarantees to its members. Please call ahead to assure a member services representative will be available. </p>
+
+      </div>
+        
+      <div id="right_inner" class="clearfix">
+       <p class="headgreen"><a name="24hour"></a>24-Hour Account Access</p>
+       <p><%= link_to "Home Branch", hb_login_path %> is here!  You now have access to your account via the Internet 24-hours a day, seven days a week.  <%= link_to "Home Branch", hb_login_path %>, our FREE Internet Banking service, allows you to view your account and perform transactions conveniently, any time you choose.  Use your DOTTI PIN today, or request your <%= link_to "Home Branch", hb_login_path %> PIN today to: </p>
+       <ul>
+       		<li>Check account balances</li>
+            <li>Transfer funds between accounts</li>
+            <li>Make loan payments</li>
+            <li>View account history</li>
+            <li>Verify deposits</li>
+            <li>View and download copies of cleared checks</li>
+       </ul>
+       
+       <p>Our telephone account access system, DOTTI (Director Of Telephone Teller Information), continues to provide convenience to our members 24-hours a day, seven days.  Perform numerous transactions over the telephone by calling (562) 923-DFCU, (562) 923-3328.  Forgot your DOTTI PIN, email us at <%= link_to "comments@downeyfcu.org", new_contact_path %>, or call us at (562) 862-8141, ext. 227 and we will mail you a PIN and DOTTI user guide.</p>
+       
+       <p>Your Downey FCU ATM or ATM/Visa Debit Card gives you access to your cash 24-hours a day.  Use your card at any CO-OP, Star System or Plus System ATM to access your cash.  Remember, your ATM/Visa Debit Card can be used at any merchant that displays the Visa logo.  Deposits are allowed at most CO-OP ATMs.</p>
+       
+       <p>For the location of a CO-OP ATM near you, visit the CO-OP web site <br /><%= link_to "www.co-opnetwork.org", "http://www.co-opnetwork.org", :rel=>"confirm external" %> or call 888-SITECOOP.</p>
+       
+       <p class="centertext"><%= image_tag "logo_plus.gif", :alt=>"", :width=>55, :height=>35, :class=>"imagespace" %><%= image_tag "coop.gif", :alt=>"", :width=>61, :height=>39, :class=>"imagespace" %><%= image_tag "star.gif", :alt=>"", :width=>61, :height=>39, :class=>"imagespace" %><%= image_tag "logo_visa.gif", :alt=>"", :width=>53, :height=>35, :class=>"imagespace" %></p>
+       
+       <hr />
+       <p class="headgreen">No Surcharge ATMs</p>
+       <p>As part of the CO-OP ATM Network, we offer more no-surcharge ATMs than the major banks. And we're all over the place. You can make no-surcharge withdrawals from your DFCU account at 19,000 CO-OP Network ATMs in all 50 states, and many also accept deposits. Next time you travel for business or pleasure, remember that the CO-OP Network keeps your DFCU account close at hand - nationwide.</p>
+       <p>You can also choose one of our two convenient locations To access your account.</p>
+       <p class="bold">Downey FCU*<br />
+8237 Third Street<br />
+Downey Conveniently located on the Corner of 3rd and New St.<br />
+		<span class="disclaimer">*Deposits and Withdrawals</span>
+        </p>
+        
+        <p class="bold">Downey Regional Medical Center*<br />
+11500 Brookshire Avenue<br />
+Downey Conveniently located outside The gift shop on the main floor.<br />
+<span class="disclaimer">*No Deposits at this location</span>
+</p>
+		<p class="bold">ATM access is now available 24-hours a day, 7 days a week. </p>
+        <p>Withdrawals for DFCU and CO-OP Network Members will not be assessed a surcharge. </p>
+        <p class="disclaimer">*Deposits cannot be accepted at the ATM located at Downey Regional Medical Center. Our ATM machines are part of the CO-OP Network. For the location of a CO-OP ATM Machine near you visit the CO-OP web site at <%= link_to "www.co-opnetwork.org", "http://www.co-opnetwork.org", :rel=>"confirm external" %>. Most CO-OP ATM machines will accept deposits and without surcharge! </p>
+        </div>
+    </div>

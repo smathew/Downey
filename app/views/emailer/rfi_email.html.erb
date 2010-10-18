@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML Response from Downey </title></head>			
+<body bgcolor="#ffffff">
+<table border="0">
+<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ REQUEST INFORMATION FORM ] ---------------</b></font></td></tr>
+    		<tr><td bgcolor="#ead273">Date Submitted :  </td><td bgcolor="#f7efc1"> 	<%= Time.now.strftime("%A, %B %d, %Y, %H:%M:%S") %></td></tr>
+    		<tr align="center"><td colspan="2" bgcolor="#4a759c"><font color="white" face="verdana" size="2"><b>Requests More Information on the following:</b></font></td></tr>
+			<% if (@app.dfcu_membership == "yes") %>
+			    <tr><td bgcolor="#ead273">DFCU Membership : </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.checking_accounts == "yes") %>
+			    <tr><td bgcolor="#ead273">Checking Accounts : </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.silverstar_member == "yes") %>
+			    <tr><td bgcolor="#ead273">Silver Star Member:</td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.ira_accounts == "yes") %>
+			    <tr><td bgcolor="#ead273">IRA Accounts: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.minor_accounts == "yes") %>
+			    <tr><td bgcolor="#ead273">Minor Accounts: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.coogan_account == "yes") %>
+			    <tr><td bgcolor="#ead273">Coogan Trust Account: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.visa_account == "yes") %>
+			    <tr><td bgcolor="#ead273">DFCU Visa Account: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.atm_card == "yes") %>
+			    <tr><td bgcolor="#ead273">DFCU ATM Card: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.direct_deposit == "yes") %>
+			    <tr><td bgcolor="#ead273">Direct Deposit: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.dotti == "yes") %>
+			    <tr><td bgcolor="#ead273">DOTTI: </td><td bgcolor="#f7efc1">Requests More Information</td></tr>
+			<% end %>
+			<% if (@app.other == "yes") %>
+			    <tr><td bgcolor="#ead273">Other Information Required: </td><td bgcolor="#f7efc1"><%= @app.otherinfo %></td></tr>
+			<% end %>
+			
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ APPLICANT INFORMATION ] ---------------</b></font></td></tr>
+			<tr><td bgcolor="#ead273">Name : </td><td bgcolor="#f7efc1"><%= @app.name %></td></tr>
+			<tr><td bgcolor="#ead273">Account number: </td><td bgcolor="#f7efc1"><%= @app.dfcu_accountno %></td></tr>
+			<tr><td bgcolor="#ead273">Home Phone Number: </td><td bgcolor="#f7efc1"><%= @app.home_phone %></td></tr>
+			<tr><td bgcolor="#ead273">Email Address: </td><td bgcolor="#f7efc1"><%= @app.email_address %></td></tr>
+			<tr><td bgcolor="#ead273">Address : </td><td bgcolor="#f7efc1"><%= @app.address %></td></tr>
+			<tr><td bgcolor="#ead273">City: </td><td bgcolor="#f7efc1"><%= @app.city %></td></tr>
+			<tr><td bgcolor="#ead273">State: </td><td bgcolor="#f7efc1"><%= @app.state %></td></tr>
+			<tr><td bgcolor="#ead273">Zip: </td><td bgcolor="#f7efc1"><%= @app.zip %></td></tr>"
+			<tr><td bgcolor="#ead273">Employer: </td><td bgcolor="#f7efc1"><%= @app.employer %></td></tr>
+			<tr><td bgcolor="#ead273">Work Phone Number: </td><td bgcolor="#f7efc1"><%= @app.work_phone %></td></tr>
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ END OF EMAIL TRANSMISSION ] ---------------</b></font></td><tr>
+			</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<h1>Editing reqinfo</h1>
+
+<% form_for(@reqinfo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :dfcu_membership %><br />
+    <%= f.text_field :dfcu_membership %>
+  </p>
+  <p>
+    <%= f.label :checking_accounts %><br />
+    <%= f.text_field :checking_accounts %>
+  </p>
+  <p>
+    <%= f.label :silverstar_member %><br />
+    <%= f.text_field :silverstar_member %>
+  </p>
+  <p>
+    <%= f.label :ira_accounts %><br />
+    <%= f.text_field :ira_accounts %>
+  </p>
+  <p>
+    <%= f.label :minor_accounts %><br />
+    <%= f.text_field :minor_accounts %>
+  </p>
+  <p>
+    <%= f.label :coogan_account %><br />
+    <%= f.text_field :coogan_account %>
+  </p>
+  <p>
+    <%= f.label :visa_account %><br />
+    <%= f.text_field :visa_account %>
+  </p>
+  <p>
+    <%= f.label :atm_card %><br />
+    <%= f.text_field :atm_card %>
+  </p>
+  <p>
+    <%= f.label :direct_deposit %><br />
+    <%= f.text_field :direct_deposit %>
+  </p>
+  <p>
+    <%= f.label :dotti %><br />
+    <%= f.text_field :dotti %>
+  </p>
+  <p>
+    <%= f.label :other %><br />
+    <%= f.text_field :other %>
+  </p>
+  <p>
+    <%= f.label :otherinfo %><br />
+    <%= f.text_field :otherinfo %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :dfcu_accountno %><br />
+    <%= f.text_field :dfcu_accountno %>
+  </p>
+  <p>
+    <%= f.label :home_phone %><br />
+    <%= f.text_field :home_phone %>
+  </p>
+  <p>
+    <%= f.label :employer %><br />
+    <%= f.text_field :employer %>
+  </p>
+  <p>
+    <%= f.label :work_phone %><br />
+    <%= f.text_field :work_phone %>
+  </p>
+  <p>
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @reqinfo %> |
+<%= link_to 'Back', reqinfos_path %>

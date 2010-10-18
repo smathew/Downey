@@ -1,0 +1,53 @@
+<div id="leftcontent" class="clearfix">
+       <p class="headgreen">Home Branch</p>
+       <p>Check out all of the benefits to Home Branch. Enter now to discover the fast, convenient access available through Home Branch. With your Personal Identification Number (PIN) you can see all of your accounts, view transactions and even transfer funds - all at the touch of your fingertips. You can personalize your first page to show you the account information you want NOW. <span class="bold">If this is your first time logging into Home Branch, enter your DOTTI (audio response) PIN below, otherwise, request your PIN <a href="contact.asp">here</a>.</span></p>
+       <p class="headgreen">CU pay IT!</p>
+       <p><%= image_tag "CU-PAYIT-Logosm.jpg", :alt=>"", :width=>150, :height=>115, :class=>"imagespace2 left" %>Our new bill payment service is HERE! Sign up through Home Branch or check out &quot;CU Pay It&quot; by clicking here for our <%= link_to "Online Demo",  "https://www.billpaysite.com/V2/Demo.aspx?instID=40023", :rel=>"confirm external" %>. </p>
+       	
+     </div>
+      <div id="right_inner" class="clearfix">
+      <p>&nbsp;</p>
+		<table border="1" bordercolor="#999999" cellpadding="0" cellspacing="0">
+        	<tr>
+            	<td>
+                	<table cellpadding="0" cellspacing="0" width="220">
+                    <th class="quicklinks">Home Branch - Quick Links</th>
+                    <tr>
+                    <td>
+                    <div class="hb">
+                    	<ul>
+                        	<li><%= link_to "Questions? Comments? Email Us", new_contact_path %>.</li>
+                            <li><%= link_to "Request a Home Branch PIN", new_contact_path %></li>
+                            <li><%= link_to "Monthly Share Draft Reconciliation Form", "pdf/reconciliation.pdf" %></li>
+                            <li><%= link_to "Security Information", privacy_path %></li>
+                            <li><%= link_to "FAQ", hbfaq_path %></li>
+                        </ul>
+                    </div>
+                    </td>
+                    </tr>
+                    </table>
+                </td>
+                <td class="quicklinks">
+                <form name="login" method="post" action="/hbv3_2/login.asp">
+					 <table border="0" width="300" class="hb2" align="left">
+			          <tr>
+			            <td align="right">Account #:</td>
+			            <td><input type="text" size="10" name="account"></td>
+			          </tr>
+			          <tr>
+			            <td align="right">PIN:</td>
+			            <td><input type="password" size="12" name="pin"></td>
+			          </tr>
+			          <tr>
+			            <td colspan="2" class="centertext">
+			             <input type="submit" value="Log In" name="login"></td>
+			          </tr>
+			       </table>
+		  </form>
+         
+                </td>
+            </tr>
+        </table>
+
+        </div>
+    </div>

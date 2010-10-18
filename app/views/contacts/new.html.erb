@@ -1,0 +1,34 @@
+<div id="leftcontent" class="clearfix">
+    <p class="headgreen">We would love to hear from you!</p>
+    <p>Downey Federal Credit Union welcomes your comments! Please fill out the form and we will contact you as soon as possible.</p>
+</div>
+<% form_for(@contact) do |f| %>
+  <%= f.error_messages %>
+<table width="440" border="0" cellpadding="3" cellspacing="0">
+            <tr>
+                <td colspan="2"><h3>Please provide your information</h3></td>
+            </tr>
+            <tr>
+                <td width="134">Name:</td>
+                <td width="291"><%= f.text_field :name, :maxlength=>60 %></td>
+            </tr>
+            <tr>
+                <td align="left">Email:</td>
+                <td><%= f.text_field :email, :maxlength=>60 %></td>
+            </tr>
+                <td align="left">Phone:</td>
+              <td><%= f.text_field :phone, :maxlength=>12 %>(XXX-XXX-XXXX)</td>            
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td align="left">Comments:</td>
+                <td><%= f.text_area :comments, :cols=>45, :rows=>3, :maxlength => 255 %></td>
+            </tr>
+            <tr>
+              <td align="center" colspan="2"><%= f.submit 'Submit' %></td>
+            </tr>
+        </table>
+                
+   <% end %>
+</div>

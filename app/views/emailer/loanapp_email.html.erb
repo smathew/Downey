@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML Response from Downey </title></head>			
+<body bgcolor="#ffffff">
+	<table border="0">
+		<tr><td colspan="2" border=\"1\"><div align=\"left\"><font face="verdana" size=\"1\">Date Submitted :<%= Time.now.strftime("%A, %B %d, %Y, %H:%M:%S") %> </td>
+  			</tr>
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ NEW LOAN APPLICATION ] ---------------</b></font></td></tr>
+    		<tr><td bgcolor="#ead273">Type of loan requested:  </td><td bgcolor="#f7efc1"><%= @app.type_of_loan %> </td></tr>
+			<tr><td bgcolor="#ead273">Loan Amount Requested: </td><td bgcolor="#f7efc1">$ <%= @app.loan_amount %> </td></tr>
+			<tr><td bgcolor="#ead273">Credit life or disability insurance: </td><td bgcolor="#f7efc1"><%= @app.disability_insurance %> </td></tr>
+			
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ APPLICANT INFORMATION ] ---------------</b></font></td></tr>
+			<tr><td bgcolor="#ead273">Account number: </td><td bgcolor="#f7efc1"><%= @app.applicant_account_number %></td></tr>
+			<tr><td bgcolor="#ead273">Name : </td><td bgcolor="#f7efc1"><%= @app.applicant_name %></td></tr>
+			<tr><td bgcolor="#ead273">Home Phone Number: </td><td bgcolor="#f7efc1"><%= @app.applicant_home_phone %></td></tr>
+			<tr><td bgcolor="#ead273">Best Time to Call: </td><td bgcolor="#f7efc1"><%= @app.applicant_time_to_call %></td></tr>
+			<tr><td bgcolor="#ead273">Email Address: </td><td bgcolor="#f7efc1"><%= @app.applicant_email_address %></td></tr>
+			
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>Home Address</b></font></td></tr>
+			<tr><td bgcolor="#ead273">Address : </td><td bgcolor="#f7efc1"><%= @app.applicant_home_address %>   </td></tr>
+			<tr><td bgcolor="#ead273">City:  </td><td bgcolor="#f7efc1"><%= @app.applicant_city %></td></tr>
+			<tr><td bgcolor="#ead273">State : </td><td bgcolor="#f7efc1"><%= @app.applicant_state %></td></tr>
+			<tr><td bgcolor="#ead273">Zip : </td><td bgcolor="#f7efc1"><%= @app.applicant_zip %></td></tr>
+			<tr><td bgcolor="#ead273">Monthly Payment : </td><td bgcolor="#f7efc1">$ <%= @app.applicant_monthly_mortgage %></td></tr>
+			
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>Employer Details</b></font></td></tr>
+			<tr><td bgcolor="#ead273">Name : </td><td bgcolor="#f7efc1"><%= @app.applicant_employer_name %></td></tr>
+			<tr><td bgcolor="#ead273">Phone Number :  </td><td bgcolor="#f7efc1"><%= @app.applicant_work_phone %></td></tr>
+			<tr><td bgcolor="#ead273">Hire Date : </td><td bgcolor="#f7efc1"><%= @app.applicant_hire_date %></td></tr>
+			<tr><td bgcolor="#ead273">Income/Salary : </td><td bgcolor="#f7efc1">$ <%= @app.applicant_income %>  <%= @app.applicant_income_frequency %></td></tr>
+			<% if !@app.applicant_other_income.blank? %>
+			    <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>Other Income Sources</b></font></td></tr>
+			    <tr><td bgcolor="#ead273">Other Income Amount : </td><td bgcolor="#f7efc1">$ <%= @app.applicant_other_income %>	<%= @app.applicant_other_income_frequency %> </td></tr>
+			    <tr><td bgcolor="#ead273">Other Income Source :  </td><td bgcolor="#f7efc1"><%= @app.applicant_other_income_source %></td></tr>
+            <% end %>
+            <% if (!@app.applicant_debt1.blank?  or !@app.applicant_debt2.blank? or !@app.applicant_debt3.blank? or !@app.applicant_debt4.blank? or !@app.applicant_debt5.blank? or !@app.applicant_debt6.blank?) %>
+		        <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ APPLICANT DEBTS/MONTHLY PAYMENTS ] ---------------</b></font></td></tr>
+		        <% if !@app.applicant_debt1.blank? %>
+		            <tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+		            <td bgcolor="#f7efc1"><%= @app.applicant_debt1 %> <br /><%= @app.applicant_creditor1 %> <br /><%= @app.applicant_outstanding_balance1 %> <br /><%= @app.applicant_monthly_payment1 %></td></tr>
+		            <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		        <% end %>
+		        <% if !@app.applicant_debt2.blank? %>
+		            <tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+		            <td bgcolor="#f7efc1"><%= @app.applicant_debt2 %> <br /><%= @app.applicant_creditor2 %> <br /><%= @app.applicant_outstanding_balance2 %> <br /><%= @app.applicant_monthly_payment2 %></td></tr>
+		            <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		        <% end %>
+		        <% if !@app.applicant_debt3.blank? %>
+		            <tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+		            <td bgcolor="#f7efc1"><%= @app.applicant_debt3 %> <br /><%= @app.applicant_creditor3 %> <br /><%= @app.applicant_outstanding_balance3 %> <br /><%= @app.applicant_monthly_payment3 %></td></tr>
+		            <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		        <% end %>
+		        <% if !@app.applicant_debt4.blank? %>
+		            <tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+		            <td bgcolor="#f7efc1"><%= @app.applicant_debt4 %> <br /><%= @app.applicant_creditor4 %> <br /><%= @app.applicant_outstanding_balance4 %> <br /><%= @app.applicant_monthly_payment4 %></td></tr>
+		            <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		        <% end %>
+		        <% if !@app.applicant_debt5.blank? %>
+		            <tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+		            <td bgcolor="#f7efc1"><%= @app.applicant_debt5 %> <br /><%= @app.applicant_creditor5 %> <br /><%= @app.applicant_outstanding_balance5 %> <br /><%= @app.applicant_monthly_payment5 %></td></tr>
+		            <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		        <% end %>
+		        <% if !@app.applicant_debt6.blank? %>
+		            <tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+		            <td bgcolor="#f7efc1"><%= @app.applicant_debt6 %> <br /><%= @app.applicant_creditor6 %> <br /><%= @app.applicant_outstanding_balance6 %> <br /><%= @app.applicant_monthly_payment6 %></td></tr>
+		            <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		        <% end %>
+		    <% end %>
+			<% if !@app.joint_applicant_name.blank? %>
+			    <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ CO-APPLICANT INFORMATION ] ---------------</b></font></td></tr>
+			    <tr><td bgcolor="#ead273">Account number: </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_account_number %></td></tr>
+			    <tr><td bgcolor="#ead273">Name : </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_name %> </td></tr>
+			    <tr><td bgcolor="#ead273">Home Phone Number: </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_home_phone %></td></tr>
+			    <tr><td bgcolor="#ead273">Best Time to Call: </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_time_to_call %></td></tr>
+			    <tr><td bgcolor="#ead273">Email Address: </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_email_address %></td></tr>
+    			
+			    <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>Home Address</b></font></td></tr>
+			    <tr><td bgcolor="#ead273">Address : </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_home_address %> </td></tr>
+			    <tr><td bgcolor="#ead273">City:  </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_city %></td></tr>
+			    <tr><td bgcolor="#ead273">State : </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_state %></td></tr>
+			    <tr><td bgcolor="#ead273">Zip : </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_zip %></td></tr>
+			    <tr><td bgcolor="#ead273">Monthly Payment : </td><td bgcolor="#f7efc1">$ <%= @app.joint_applicant_monthly_mortgage %></td></tr>
+			    
+    			<% if !@app.joint_applicant_employer_name.blank? %>
+			        <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>Current Employer</b></font></td></tr>
+			        <tr><td bgcolor="#ead273">Name : </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_employer_name %></td></tr>
+			        <tr><td bgcolor="#ead273">Phone Number :  </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_work_phone %></td></tr>
+			        <tr><td bgcolor="#ead273">Hire Date : </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_hire_date %></td></tr>
+			        <tr><td bgcolor="#ead273">Income/Salary : </td><td bgcolor="#f7efc1">$ <%= @app.joint_applicant_income %>  <%= @app.joint_applicant_income_frequency %> </td></tr>
+    			<% end %>
+    			<% if (!@app.joint_applicant_other_income.blank?  or !@app.joint_applicant_other_income_source.blank?) %>
+			        <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>Other Income Sources</b></font></td></tr>
+			        <tr><td bgcolor="#ead273">Other Income Amount : </td><td bgcolor="#f7efc1">$ <%= @app.joint_applicant_other_income %> <%= @app.joint_applicant_other_income_frequency %></td></tr>
+			        <tr><td bgcolor="#ead273">Other Income Source :  </td><td bgcolor="#f7efc1"><%= @app.joint_applicant_other_income_source %></td></tr>
+			    <% end %>
+			    <tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+			    <% if (!@app.joint_applicant_debt1.blank?  or !@app.joint_applicant_debt2.blank? or !@app.joint_applicant_debt3.blank?  or !@app.joint_applicant_debt4.blank? or !@app.joint_applicant_debt5.blank?  or !@app.joint_applicant_debt6.blank?) %>
+		        {
+		            <tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ CO-APPLICANT DEBTS/MONTHLY PAYMENTS ] ---------------</b></font></td></tr>
+		            <% if !@app.joint_applicant_debt1.blank? %>
+<tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+<td bgcolor="#f7efc1"><%= @app.joint_applicant_debt1 %> <br /><%= @app.joint_applicant_creditor1 %> <br /><%= @app.joint_applicant_outstanding_balance1 %> <br /><%= @app.joint_applicant_monthly_payment1 %> </td></tr>
+<tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		            <% end %>
+		            <% if !@app.joint_applicant_debt2.blank? %>
+<tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+<td bgcolor="#f7efc1"><%= @app.joint_applicant_debt2 %> <br /><%= @app.joint_applicant_creditor2 %> <br /><%= @app.joint_applicant_outstanding_balance2 %> <br /><%= @app.joint_applicant_monthly_payment2 %> </td></tr>
+<tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		            <% end %>
+		            <% if !@app.joint_applicant_debt3.blank? %>
+<tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+<td bgcolor="#f7efc1"><%= @app.joint_applicant_debt3 %> <br /><%= @app.joint_applicant_creditor3 %> <br /><%= @app.joint_applicant_outstanding_balance3 %> <br /><%= @app.joint_applicant_monthly_payment3 %> </td></tr>
+<tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		            <% end %>
+		            <% if !@app.joint_applicant_debt4.blank? %>
+<tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+<td bgcolor="#f7efc1"><%= @app.joint_applicant_debt4 %> <br /><%= @app.joint_applicant_creditor4 %> <br /><%= @app.joint_applicant_outstanding_balance4 %> <br /><%= @app.joint_applicant_monthly_payment4 %> </td></tr>
+<tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		            <% end %>
+		            <% if !@app.joint_applicant_debt5.blank? %>
+<tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+<td bgcolor="#f7efc1"><%= @app.joint_applicant_debt5 %> <br /><%= @app.joint_applicant_creditor5 %> <br /><%= @app.joint_applicant_outstanding_balance5 %> <br /><%= @app.joint_applicant_monthly_payment5 %> </td></tr>
+<tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		            <% end %>
+		            <% if !@app.joint_applicant_debt6.blank? %>
+<tr><td bgcolor="#ead273">Type of Debt: <br />Name of Creditor:<br />Outstanding Balance:<br />Monthly Payment:</td>
+<td bgcolor="#f7efc1"><%= @app.joint_applicant_debt6 %> <br /><%= @app.joint_applicant_creditor6 %> <br /><%= @app.joint_applicant_outstanding_balance6 %> <br /><%= @app.joint_applicant_monthly_payment6 %> </td></tr>
+<tr><td bgcolor="#ead273" colspan="2"><hr color="#4A759C" /></td></tr>
+		            <% end %>
+		        <% end %>
+		    <% end %>
+			<tr align="center"><td colspan="2" bgcolor="#4A759C"><font color="white" face="verdana" size="2"><b>----- [ END OF EMAIL TRANSMISSION ] ---------------</b></font></td><tr>
+			</td>
+		</tr>
+	</table>"
+</body>"
+</html>
+
